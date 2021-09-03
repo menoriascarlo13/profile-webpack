@@ -1,0 +1,24 @@
+{
+  "name": "profile-webpack",
+  "version": "1.0.0",
+  "description": "boilerplate based on webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menoriascarlo13/profile-webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/menoriascarlo13/profile-webpack/issues"
+  },
+  "homepage": "https://github.com/menoriascarlo13/profile-webpack#readme",
+  "devDependencies": {
+    "webpack": "^5.51.2",
+    "webpack-cli": "^4.8.0"
+  }
+}
