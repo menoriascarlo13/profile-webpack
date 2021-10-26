@@ -4,6 +4,8 @@ let newLimit = 0;
 let previousLimit = 0;
 let addLoadMoreOnce = true;
 
+import imgLazy from './imgLazy';
+
 const projectList = {
 	init() {
 		this.initialProcess(projectListData);

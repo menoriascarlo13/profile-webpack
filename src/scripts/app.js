@@ -3,11 +3,13 @@ import imgLazy from './imgLazy';
 import projectList from './projects';
 import tech from './tech';
 import nav from './nav';
+import scroller from './scrolling';
 
 window.addEventListener('load', () => {
 	projectList.init();
 	tech.init();
 	nav.init();
+	scroller.init();
 	imgLazy.init('load');
 
 	window.addEventListener('resize', util.debounce(function () {
