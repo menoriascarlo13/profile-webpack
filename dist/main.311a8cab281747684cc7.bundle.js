@@ -1,1 +1,0 @@
-(()=>{"use strict";var e;(e=document.createElement("img")).src="../assets/image.png",document.body.appendChild(e),document.body.appendChild(function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"Hello, Webpack!",n=document.createElement("h1");return n.innerHTML=e,console.log("i was done"),n}())})();

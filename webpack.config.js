@@ -94,6 +94,13 @@ module.exports = {
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: "[name].[contenthash].css"
+		}), 
+		new CopyPlugin({
+			patterns: [{
+					from: "src/assets",
+					to: "assets"
+				},
+			],
 		}),
 	],
 };
