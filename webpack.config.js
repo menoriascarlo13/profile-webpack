@@ -8,7 +8,7 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js', // output file name of the targeted file
-        path: path.resolve(__dirname, 'deploy') // folder location on which to 
+        path: path.resolve(__dirname, 'dist') // folder location on which to 
     },
     devServer: { 
         contentBase: './deploy', //tells where the files to be serve
