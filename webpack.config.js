@@ -5,6 +5,9 @@ const {
 } = require('clean-webpack-plugin');
 const path = require('path');
 const globImporter = require('node-sass-glob-importer');
+const CopyPlugin = require("copy-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const devMode = process.env.NODE_ENV !== "production";
 
 
 module.exports = {
@@ -30,34 +33,48 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.s?css$/,
-				exclude: /node_modules/,
-				use: [
-					MiniCssExtractPlugin.loader,
-					"css-loader",
-					// "sass-loader"
-					{
-						loader: "sass-loader",
-						options: {
-							sassOptions: {
-								importer: globImporter()
-							}
-						}
-					}
-				] //loaders are important, they are evaluated in reverse order, from right to left and from bottom to top
-			},
-			{
-				test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-				type: 'asset/resource',
-			},
-			{
-				test: /\.css$/i,
-				exclude: /node_modules/,
-				use: [
-					process.env.NODE_ENV !== "production" ? "style-loader" :
-					MiniCssExtractPlugin.loader, "css-loader"
+				test: /\.(jpe?g|png|gif|svg)$/i,
+				exclude: [
+					path.resolve(__dirname, './node_modules'),
 				],
-			}
+				use: [{
+					loader: ImageMinimizerPlugin.loader,
+					options: {
+						severityError: "warning", // Ignore errors on corrupted images
+						minimizerOptions: {
+							plugins: ["gifsicle"],
+						},
+					},
+				}, ],
+			},
+			{
+				test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
+				use: [{
+					loader: 'file-loader',
+					options: {
+						name: '[path][name].[ext]',
+						context: path.resolve(__dirname, "src/"),
+						publicPath: "../",
+					}
+				}]
+			},
+			{
+				test: /\.(sa|sc|c)ss$/,
+				use: [
+					MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader',
+				]
+			}, {
+				test: /\.css$/,
+				use: [{
+						loader: MiniCssExtractPlugin.loader,
+						options: {
+							publicPath: "../",
+						},
+					},
+					"css-loader",
+				],
+			},
+
 		]
 	},
 	plugins: [ // Plugins to be used
@@ -77,6 +94,6 @@ module.exports = {
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: "[name].[contenthash].css"
-		})
+		}),
 	],
 };

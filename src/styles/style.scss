@@ -30,16 +30,15 @@
 
 //7. Theme
 @import "theme/mixins";
-@import "theme/*.scss";
-// @import "theme/typography";
-// @import "theme/global";
-// @import "theme/buttons";
-// @import "theme/card";
-// @import "theme/header";
-// @import "theme/footer";
-// @import "theme/nav";
-// @import "theme/modal";
-// @import "theme/section-projects";
-// @import "theme/section-hero";
-// @import "theme/section-tech";
-// @import "theme/section-social";
+@import "theme/typography";
+@import "theme/global";
+@import "theme/buttons";
+@import "theme/card";
+@import "theme/header";
+@import "theme/footer";
+@import "theme/nav";
+@import "theme/modal";
+@import "theme/section-projects";
+@import "theme/section-hero";
+@import "theme/section-tech";
+@import "theme/section-social";
