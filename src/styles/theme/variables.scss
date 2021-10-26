@@ -1,0 +1,50 @@
+
+$white:          #ffffff;
+$black:          #000000;
+$red:            #ff4136;
+$beige-100: 	#fbb13c;
+$blue-100: 		#bceff8;
+$blue-200: 		#eff9fd;
+$blue-300: 		#003375;
+$blue-400: 		#ddf5ff;
+
+$primary:           $black;
+$secondary:         $white;
+$tertiary:          $blue-200;
+
+$grid-columns:      12;
+$grid-gutter-width: 1.5rem;
+
+$theme-colors: (
+  "primary":        $primary,
+  "secondary":      $secondary,
+  "tertiary":     	$tertiary,
+  "danger":         $red
+);
+
+$colors: (
+  "black":          $black,
+  "white":          $white,
+  "red":            $red,
+  "blue-100":       $blue-100,
+  "blue-200":       $blue-200,
+  "blue-300":       $blue-300,
+  "blue-400":       $blue-400
+) !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);

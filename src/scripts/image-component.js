@@ -1,4 +1,4 @@
-import image from "./image.png";
+import image from "../assets/image.png";
 
 const img = document.createElement("img");
 img.src = image;

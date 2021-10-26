@@ -1,0 +1,62 @@
+.project-card {
+	overflow: hidden;
+
+	width: 100%;
+	max-width: 400px;
+	height: 100%;
+	margin: 0 auto;
+
+	cursor: pointer;
+
+	border-radius: 10px;
+	background-color: $blue-200;
+
+	transition: background-color 0.3s ease;
+
+	@include media-breakpoint-up(lg) {
+		&:hover {
+			background-color: $blue-400;
+
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.project-item-container {
+	margin-bottom: 30px;
+
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 40px;
+	}
+}
+
+.project-description-wrapper {
+	padding: 20px;
+
+	@include media-breakpoint-up(lg) {
+		padding: 30px;
+	}
+}
+
+.project-image {
+	@include aspect-ratio(1, 1);
+
+	overflow: hidden;
+
+	margin-bottom: 0;
+
+	// @include media-breakpoint-up(lg) {
+	// 	@include aspect-ratio(1, 1);
+	// }
+
+	img {
+		transition: transform 0.3s ease, opacity 0.5s ease;
+		transform: scale(1);
+	}
+}

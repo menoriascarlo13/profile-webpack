@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+	<%= require('html-loader!./head/header.html').default %>
+	<main>
+		<%= require('html-loader!./sections/section-hero.html').default %>
+		<%= require('html-loader!./sections/section-project.html').default %>
+		<%= require('html-loader!./sections/section-social.html').default %>
+		<%= require('html-loader!./sections/section-tech.html').default %>
+	</main>
+	<%= require('html-loader!./bottom/footer.html').default %>
+</body>
+
+</html>

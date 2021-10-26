@@ -1,0 +1,87 @@
+.section-tech-stack {
+	background-color: $blue-200;
+
+	@include media-breakpoint-down(lg) {
+		padding-bottom: 70px;
+	}
+
+	.container-fluid {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.tech-wrapper {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 50px;
+		}
+	}
+
+	.tech-item {
+		z-index: 1;
+
+		width: calc(100% / 3);
+		margin: 0 20px;
+		padding: 10px;
+
+		pointer-events: auto;
+
+		@include media-breakpoint-up(sm) {
+			width: calc(100% / 4);
+		}
+
+		@include media-breakpoint-up(md) {
+			width: calc(100% / 5);
+			max-width: 150px;
+
+			&:hover {
+				.tech-info {
+					opacity: 1;
+				}
+			}
+		}
+
+		figure {
+			@include aspect-ratio(1, 1);
+
+			// margin-bottom: 0;
+		}
+
+		.tech-info {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			width: 100%;
+			height: 100%;
+
+			opacity: 0;
+			border-radius: 20px;
+			background-color: rgba($black, 0.5);
+
+			transition: opacity 0.5s ease;
+
+			@include media-breakpoint-up(lg) {
+				padding: 15px;
+			}
+
+			.tech-level,
+			.tech-level-title {
+				color: $white;
+
+				text-shadow: -3px 0 3px $black;
+
+				@include media-breakpoint-down(md) {
+					font-size: 18px;
+				}
+			}
+
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&>* {
+			pointer-events: none;
+		}
+	}
+}

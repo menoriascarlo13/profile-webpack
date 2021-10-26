@@ -1,0 +1,45 @@
+// Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "~bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+@import "theme/variables";
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+// Optional
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/modal";
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utililies.scss`
+@import "~bootstrap/scss/utilities/api";
+
+//7. Theme
+@import "theme/mixins";
+@import "theme/*.scss";
+// @import "theme/typography";
+// @import "theme/global";
+// @import "theme/buttons";
+// @import "theme/card";
+// @import "theme/header";
+// @import "theme/footer";
+// @import "theme/nav";
+// @import "theme/modal";
+// @import "theme/section-projects";
+// @import "theme/section-hero";
+// @import "theme/section-tech";
+// @import "theme/section-social";
