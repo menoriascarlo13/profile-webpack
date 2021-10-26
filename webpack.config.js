@@ -10,10 +10,6 @@ module.exports = {
         filename: '[name].bundle.js', // output file name of the targeted file
         path: path.resolve(__dirname, 'dist') // folder location on which to 
     },
-    devServer: { 
-        contentBase: './deploy', //tells where the files to be serve
-        open: true // tell open the entry page automatically
-    },
     module: {
         rules: [{
                 test: /\.js$/, //test describes what kind of files need to be transformed
