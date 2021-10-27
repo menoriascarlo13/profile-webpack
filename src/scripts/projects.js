@@ -4,7 +4,11 @@ let newLimit = 0;
 let previousLimit = 0;
 let addLoadMoreOnce = true;
 
+
+import $ from 'jquery';
 import imgLazy from './imgLazy';
+import showError from './error';
+require('./jquery.txtTruncate');
 
 const projectList = {
 	init() {
@@ -86,7 +90,7 @@ const projectList = {
 					} else {
 						const loadMoreBtn = document.getElementById('js-load-more-container');
 						try {
-							if(loadMoreBtn == null) {
+							if (loadMoreBtn == null) {
 								throw `project.js: Missing or Wrong ID on Load More button at Profile section`;
 							}
 
@@ -116,11 +120,17 @@ const projectList = {
 			// 	truncate: 'words',
 			// 	length: 17
 			// });
-			// $(projectDescription).txtTruncate({
-			// 	end: '...',
-			// 	lines: (window.innerWidth < 768) ? 2 : 3,
-			// 	multiline: true
-			// });
+			console.log($(projectDescription));
+
+
+			$(document).ready(function () {
+				//YOUR JQUERY CODE
+				$(projectDescription).txtTruncate({
+					end: '...',
+					lines: (window.innerWidth < 768) ? 2 : 3,
+					multiline: true
+				});
+			});
 		} catch (err) {
 			console.warn(err);
 			showError.init();
@@ -193,7 +203,6 @@ const projectListData = [{
 	"projectLink": "https://www.stellarequipment.com/",
 	"projectYear": "2019",
 	"projectImage": "stellar.png"
-}
-]
+}]
 
 export default projectList;
