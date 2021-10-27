@@ -1,3 +1,8 @@
+import $ from 'jquery';
+import imgLazy from './imgLazy';
+import showError from './error';
+import Cuttr from 'Cuttr';
+
 const projectListLimit = 6;
 const projectCardContainer = document.getElementById('js-project-cards');
 let newLimit = 0;
@@ -5,10 +10,6 @@ let previousLimit = 0;
 let addLoadMoreOnce = true;
 
 
-import $ from 'jquery';
-import imgLazy from './imgLazy';
-import showError from './error';
-require('./jquery.txtTruncate');
 
 const projectList = {
 	init() {
@@ -116,21 +117,12 @@ const projectList = {
 				throw 'project.js: Missing Project Description element';
 			}
 
-			// new Cuttr('.js-project-description', {
-			// 	truncate: 'words',
-			// 	length: 17
-			// });
-			console.log($(projectDescription));
-
-
-			$(document).ready(function () {
-				//YOUR JQUERY CODE
-				$(projectDescription).txtTruncate({
-					end: '...',
-					lines: (window.innerWidth < 768) ? 2 : 3,
-					multiline: true
-				});
+			new Cuttr('.js-project-description', {
+				truncate: 'words',
+				length: 17
 			});
+			// console.log($(projectDescription));
+
 		} catch (err) {
 			console.warn(err);
 			showError.init();

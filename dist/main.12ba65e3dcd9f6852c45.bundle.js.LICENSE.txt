@@ -1,4 +1,15 @@
 /*!
+ * Cuttr 1.3.1
+ * https://github.com/d-e-v-s-k/cuttr-js
+ *
+ * @license GPLv3 for open source use only
+ * or Cuttr Commercial License for commercial use
+ * https://cuttr.kulahs.de/pricing/
+ *
+ * Copyright (C) 2021 https://cuttr.kulahs.de/ - A project by DEVSK
+ **/
+
+/*!
  * Flickity v2.2.2
  * Touch, responsive, flickable carousels
  *
