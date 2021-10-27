@@ -1,10 +1,14 @@
-import showError from './error'; 
+import showError from './error';
 import Flickity from "flickity";
 import txtFit from "./textFit";
+import Modal from 'bootstrap';
+
+
 
 const tech = {
 	init() {
 		this.processArray(techListData);
+		// console.log(Modal);
 	},
 	processArray(data) {
 		const techData = data;
@@ -85,7 +89,10 @@ const tech = {
 			techBody.innerHTML = `${e.techlevel}`;
 			techTitle.innerHTML = `${e.techname}`;
 
-			const currentModal = new bootstrap.Modal(techModal, {
+			// console.log(Modal);
+			// console.log(new bootstrap.Modal);
+
+			const currentModal = new Modal(techModal, {
 				keyboard: false
 			})
 

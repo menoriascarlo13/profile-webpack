@@ -8,6 +8,8 @@ const globImporter = require('node-sass-glob-importer');
 const CopyPlugin = require("copy-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const devMode = process.env.NODE_ENV !== "production";
+const BomPlugin = require('webpack-utf8-bom'); // add this line
+
 
 
 module.exports = {
@@ -79,7 +81,7 @@ module.exports = {
 	},
 	plugins: [ // Plugins to be used
 		new HtmlWebpackPlugin({
-			title: "Webpack Output",
+			title: "JCPM - Profile",
 			meta: {
 				'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
 				'charset': 'utf-8',
@@ -102,5 +104,6 @@ module.exports = {
 				},
 			],
 		}),
+		new BomPlugin(true)
 	],
 };
