@@ -172,12 +172,12 @@ const techListData = [{
 }, {
 	"id": 14,
 	"techName": "NPM",
-	"techLevel": "Beginner",
+	"techLevel": "Intermediate",
 	"techImage": "npm.png"
 }, {
 	"id": 15,
 	"techName": "Wordpress",
-	"techLevel": "Beginner",
+	"techLevel": "Intermediate",
 	"techImage": "wordpress.png"
 }, {
 	"id": 16,
@@ -204,6 +204,11 @@ const techListData = [{
 	"techName": "TailwindCSS",
 	"techLevel": "Beginner",
 	"techImage": "tailwindcss-icon.svg"
+}, {
+	"id": 21,
+	"techName": "Next.js",
+	"techLevel": "Beginner",
+	"techImage": "nextjs.png"
 }]
 
 export default tech;

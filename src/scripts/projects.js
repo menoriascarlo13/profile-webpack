@@ -195,6 +195,20 @@ const projectListData = [{
 	"projectLink": "https://www.stellarequipment.com/",
 	"projectYear": "2019",
 	"projectImage": "stellar.png"
+}, {
+	"id": 10,
+	"projectName": "Nitty Gritty",
+	"projectDescription": `Nitty Gritty® is an independent multi brand retailer, online store and showroom located in Stockholm, Sweden. Our carefully curated assortment consists of emerging designers mixed with well-established and respected fashion labels`,
+	"projectLink": "https://nittygrittystore.com/",
+	"projectYear": "2021",
+	"projectImage": "nittygritty.png"
+}, {
+	"id": 11,
+	"projectName": "Chimi",
+	"projectDescription": `CHIMI was founded in Stockholm in 2016 on the idea of creating eyewear, ready-to-wear and accessories engineered for a fearless lifestyle. To inspire the wearer to capture every aspect of modern active life, the products are imagined through the eye of futuristic simplicity, wearability and aesthetical longevity.`,
+	"projectLink": "https://chimieyewear.com/",
+	"projectYear": "2022",
+	"projectImage": "chimi.png"
 }]
 
 export default projectList;
